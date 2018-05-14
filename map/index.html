@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8' />
+    <title>Find Your Designer</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <link href=styles.css rel="stylesheet">
+</head>
+
+<body>
+    <div id='map'></div>
+
+    <!--Navigation-->
+    <div class="navbar">
+        <section id="title"><a href="https://fxtzhou.github.io/des157/projects/final/index.html">Designers of Color Map</a></section>
+    </div>
+
+    <!--Dropdown-->
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">
+                <i class="fa fa-caret-down"></i>
+            </button>
+        </div>
+    </div>
+
+    <!--New Nav-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="active" href="https://vivmokona.github.io/des157/final/index.html">Home</a>
+        <a href="https://fxtzhou.github.io/des157/projects/final/index.html">About</a>
+        <a href="profile/form.html">Profile</a>
+        <a href="contact/index.html">Contact</a>
+
+        <!--Key-->
+        <div class="key">
+            <img id='symbols' src="img/symbols.png" alt="Symbols" width="145px" height="280px">
+            <h3>Key</h3>
+        </div>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <!--JS is in HTML b/c would not work if I had a separated yet linked page-->
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoidml2bW9rb25hIiwiYSI6ImNqZG92NGYyeDA4MGQycm80cDljaXEzbDAifQ.s9ln4rd7DomkLRJ4g7FOCA';
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/vivmokona/cjdyjzgzt0dh02so8r31y2d9t',
+            center: [-98.5795, 39.8283],
+            zoom: 3.5
+        });
+
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+
+        var geojson = {
+            type: 'FeatureCollection',
+            features: [{
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-121.750000, 38.540000]
+                    },
+                    properties: {
+                        title: 'You?',
+                        description: '<a href=\"https://vivmokona.github.io/des157/final/profile/form.html" target=\"_blank\" title=\"Opens in a new window\"><p>Click here to create your profile</a></p>'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-122.400000, 37.780000]
+                    },
+                    properties: {
+                        title: '<strong>Tiffany Trieu</strong>',
+                        description: '<p>Exhibition Designer based in San Francisco, CA.</p> <a href=\"https://fxtzhou.github.io/des157/projects/final/tiffany.html" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Tiffany!</p>'
+                    }
+                },
+
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-76.290000, 36.850000]
+                    },
+                    properties: {
+                        title: 'Cindy Pham',
+                        description: '<p>Visual Designer based in Norfolk, Virginia.</p> <a href=\"https://fxtzhou.github.io/des157/projects/final/cindy.html" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Cindy!</p>'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-121.590, 39.140]
+                    },
+                    properties: {
+                        title: 'Aaron Ngai',
+                        description: '<p>UI/UX Designer based in Marysville, CA.</p> <a href=\"https://fxtzhou.github.io/des157/projects/final/aaron.html" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Aaron!</p>'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-122.26000, 37.8200]
+                    },
+                    properties: {
+                        title: 'Tara Parker-Essig',
+                        description: '<p>UI/UX Designer based in Oakland, CA.</p> <a href=\"https://fxtzhou.github.io/des157/projects/final/tara.html" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Tara!</p>'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-121.887620, 37.337621]
+                    },
+                    properties: {
+                        title: 'Vivian Luu',
+                        description: '<p>Graphic Designer based in San Jose, CA.</p> <a href=\"https://fxtzhou.github.io/des157/projects/final/vivian.html" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Vivian!</p>'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-118.4600, 34.4200]
+                    },
+                    properties: {
+                        title: 'Linh Quan',
+                        description: '<p>Graphic Designer based in Santa Clarita, CA.</p> <a href=\"https://fxtzhou.github.io/des157/projects/final/linh.html" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Linh!</p>'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-118.144500, 34.147600]
+                    },
+                    properties: {
+                        title: 'Isaac Tseng',
+                        description: '<p>Transportation Designer based in Pasadena, CA.</p> <a href=\"https://fxtzhou.github.io/des157/projects/final/isaac.html" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Isaac!</p>'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-122.493858, 37.756637]
+                    },
+                    properties: {
+                        title: 'Michelle Quach',
+                        description: '<p>Visual Designer based in San Francisco, CA.</p> <a href=\"https://fxtzhou.github.io/des157/projects/final/michelle.html" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Michelle!</p>'
+                    }
+                },
+                {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [-121.8400, 37.3700]
+                    },
+                    properties: {
+                        title: 'Jazmine Escobar-Solorio',
+                        description: '<p>Fashion Designer based in San Jose, CA.</p> <a href=\"https://fxtzhou.github.io/des157/projects/final/jazmine.html" target=\"_blank\" title=\"Opens in a new window\"><p>Learn more</a> about Jazmine!</p>'
+                    }
+                },
+            ]
+        };
+
+        // Add instructions pop-up
+        var popup = new mapboxgl.Popup({
+                closeOnClick: false
+            })
+            .setLngLat([-98.5795, 39.8283])
+            .setHTML('<h2>Instructions</h2><h3>Scroll and zoom in on icons to find out Designers of Color. Then head over to the menu to <i>create your own</i> profile!</h3>')
+            .addTo(map);
+
+        //Add full screen button
+        map.addControl(new mapboxgl.FullscreenControl(), 'bottom-left');
+
+        // Add zoom and rotation controls to the map.
+        map.addControl(new mapboxgl.NavigationControl(), 'bottom-left');
+
+        // add markers to map
+        geojson.features.forEach(function(marker) {
+
+            // create a HTML element for each feature
+            var el = document.createElement('div');
+            el.className = 'marker';
+
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .setPopup(new mapboxgl.Popup({
+                        offset: 25
+                    }) // add popups
+                    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+                .addTo(map);
+        });
+
+        /* New Nav JS */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+
+</body>
+
+</html>

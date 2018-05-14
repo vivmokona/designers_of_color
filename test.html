@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Aaron Ngai</title>
+  <meta name="viewport" content="width=device-width , initial-scale= 1.0">
+  <link href="https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400:700|Roboto+Condensed|Lobster" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link href='pagestyles.css' rel='stylesheet'>
+
+  <style>
+      .navbar {
+          overflow: hidden;
+          background-color: #333;
+          font-family: 'Roboto', Helvetica, sans-serif;
+      }
+
+      .navbar a {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 7px 16px;
+          text-decoration: none;
+      }
+
+      .dropdown {
+          float: right;
+          overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+          cursor: pointer;
+          font-size: 16px;
+          border: none;
+          outline: none;
+          color: white;
+          padding: 10px 12px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn,
+      .dropbtn:focus {
+          background-color: skyblue;
+      }
+
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+      }
+
+      .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+      }
+
+      .dropdown-content a:hover {
+          background-color: #ddd;
+      }
+
+      .show {
+          display: block;
+      }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="navbar">
+      <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">More Info
+    <i class="fa fa-caret-down"></i>
+  </button>
+          <div class="dropdown-content" id="myDropdown">
+              <a href="https://vivmokona.github.io/des157/proto2/index.html">Home</a>
+              <a href="https://fxtzhou.github.io/des157/projects/interactiveprototype2/interactiveprototype2.html">About</a>
+              <a class="active" href="#">Profile</a>
+              <a href="#contact">Contact</a>
+          </div>
+      </div>
+  </div>
+
+  <section>
+    <div class="profile">
+    <img src="photos/aaron.jpg" width="200px">
+    <h1>Aaron Ngai</h1>
+    <h2>Graphic & UI/UX Design</h2>
+    <h2>95901</h2>
+    <h2><a href="www.instagram.com/aironnai"> <i class="fab fa-instagram"></i></a></h2>
+  </div>
+
+  <article>
+    <h3>What intrigued you to Design & why did you choose the field you are in now?</h3>
+    <p>I was never really interested in Design till my senior year of High School where we had a simple Graphic Design class. I took it for units and grew to love it because of the endless creativity and freedom I felt from just doing homework. As I went through college UX/UI struck me as something I was more into as I went through classes and done my own research.</p>
+
+    <h3>What have been your biggest struggles of your career?</h3>
+    <p>The biggest struggle for me is having to chose between family and my career. Having a big ties to my family for who I am puts a lot of strain and stress on the work I do. When I was in a group project for one of my classes I had a situation where I had to be with my family and needed my group to continue working without me for the time being. Sadly that didn't work out that way and I had moments where I needed to decide if I could do all this work or be with my family. I did both which was a huge strain on my health.</p>
+
+    <h3>What have your experiences been like as a person of color in the design industry? Does those experiences shape how you solve design-related problems?</h3>
+    <p>I guess that word would be interesting. I've been through a few moments where clients would question my ability in design. As an Asian, a lot of people (in my area) see me as someone doing something greater than design or running with tradition and it gets pretty annoying and tiresome but that's just a few people in one town verse a whole country. So I don't think too much about it.</p>
+
+    <h3>How can design be more accommodating to underrepresented populations of people?</h3>
+    <p>I feel like design can open a lot of possiblites to problems that haven't been solved yet. Design can be used to tell a story and to be people together or awareness depending on how itâ€™s used. These sort of ideas can help benefit the populations that are well represented depending on those situations.</p>
+  </article>
+</section>
+
+
+
+  <footer>
+    <a href="">About</a>
+    <a href="">Contact</a>
+    <a href="">Privacy Policy</a>
+    <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+  </footer>
+
+
+
+  <script>
+      /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+      function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+              var myDropdown = document.getElementById("myDropdown");
+              if (myDropdown.classList.contains('show')) {
+                  myDropdown.classList.remove('show');
+              }
+          }
+      }
+
+  </script>
+
+</body>
+
+</html>
+
+
+</html>

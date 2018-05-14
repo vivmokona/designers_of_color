@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400:700%7CRoboto+Condensed%7CLobster%7CRock+Salt" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link href=styles.css rel="stylesheet">
+    <title>Create Your Profile</title>
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+    <script src="profile_script.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html">Designers of Color Map</a>
+
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../index.html">Home</a>
+            <a class="active" href="https://vivmokona.github.io/des157/final/index.html">Map</a>
+            <a href="../profile/form.html">Profile</a>
+            <a href="../about/about.html">About</a>
+            <a href="../contact/contact.html">Contact</a>
+        </div>
+
+        <div id="main">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <!--Prompt-->
+        <section id="instructions">
+            <h2>Create Your Profile</h2>
+            <h3>Fill out this form to be added to the Designers of Color Map!</h3>
+        </section>
+
+        <form id="contactForm">
+            <fieldset>
+                <input type="text" placeholder="Full Name" id="name" name="name" tabindex="1" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Email Address (for contact purposes only)" type="text" tabindex="2" id="email" name="email" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Location (zip code or city, state)" type="tel" tabindex="3" id="location" name="location" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Field of Design" type="text" tabindex="4" id="designfield" name="designfield" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Got a Portfolio? (optional)" type="text" tabindex="5" id="portfolio" name="portfolio">
+            </fieldset>
+            <fieldset>
+                <input placeholder="Instagram/Twitter handle (optional)" type="text" tabindex="6" id="handle" name="handle">
+            </fieldset>
+            <fieldset>
+                <input placeholder="Link to a photo of you! (optional)" type="text" tabindex="7" id="photo" name="photo">
+            </fieldset>
+
+
+            <!-- Questions -->
+            <fieldset>
+                <textarea placeholder="What intrigued you to Design and why did you choose the field you are in now?" tabindex="8" id="q1" name="q1 required"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <textarea placeholder="What have been your biggest struggles of your career?" tabindex="9" id="q2" name="q2" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <textarea placeholder="What have your experiences been like as a person of color in the design industry? Do those experiences shape how you solve design-related problems?" tabindex="10" id="q3" name="q3" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <textarea placeholder="How can design be more accommodating to underrepresented populations of people?" tabindex="11" id="q4" name="q4" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <textarea placeholder="How can design be more accommodating to underrepresented populations of people?" tabindex="12" id="q5" name="q5" required></textarea>
+            </fieldset>
+            <button type="submit">Submit</button>
+            <div class="alert">Your Submission has been Saved!</div>
+
+        </form>
+    </div>
+
+    <footer>
+        <a href="https://fxtzhou.github.io/des157/projects/final/index.html">About</a>
+        <a href="contact/index.html">Contact</a>
+        <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+    </footer>
+
+    <script>
+        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        //        // Close the dropdown if the user clicks outside of it // window.onclick = function(e) { // if (!e.target.matches('.dropbtn')) { // var myDropdown = document.getElementById("myDropdown"); // if (myDropdown.classList.contains('show')) { // myDropdown.classList.remove('show'); // } // } // }
+
+        /* New Nav JS */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+
+</body>
+
+</html>

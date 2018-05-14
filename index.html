@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Designers of Color Map</title>
+	<meta name="viewport" content="width=device-width , initial-scale= 1.0">
+	<link href="https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400:700|Rock+Salt" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+	<script type="text/javascript" src="onepagescroll.js"></script>
+	<link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+	<script src="canvasjs.min.js"></script>
+	<link href='styles.css' rel='stylesheet'>
+</head>
+
+<body>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+		<a class="active" href="https://vivmokona.github.io/des157/final/index.html">Map</a>
+				<a href="profile/form.html">Profile</a>
+		<a href="about/about.html">About</a>
+		<a href="contact/contact.html">Contact</a>
+	</div>
+
+	<div id="main">
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	</div>
+
+<header>
+	<a href="index.html">Designers of Color Map</a>
+</header>
+
+	<div id="container">
+		<section id="cta">
+			<h1>According to AIGA, 60% of Design is <span>White</span>.</h1>
+		</section>
+
+		<section id="blurb">
+			<h3>Designers change the world.<br>
+				And designers of color change the discourse of design.
+<br>
+				Share your story with us and put yourself on the map.</h3>
+
+
+<div id="linkcontainer">
+			<a id="mainlinks" href="https://vivmokona.github.io/des157/final/index.html">View Map</a>
+				<a id="mainlinks" href="profile/form.html">Make a Profile</a>
+
+		</section>
+
+	</div>
+</div>
+
+<footer>
+	<a href="about/about.html">About</a>
+	<a href="contact/contact.html">Contact</a>
+	<a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+	<a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+</footer>
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+		onePageScroll(".main", {
+			sectionContainer: "section",
+			loop: true,
+			responsiveFallback: false
+		});
+	</script>
+</body>
+
+</html>
